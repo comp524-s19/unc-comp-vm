@@ -57,13 +57,15 @@ MacOS will, by default, try to block your installing of an app not on the app st
 
 Are you already running Linux on your laptop? Great! We will still encourage you to use VirtualBox and Vagrant like your peers on Windows and Mac. Why? Primarily to help you avoid accidentally mucking up your personal Linux host operating systems for our purposes. We expect an Ubuntu 18.04 Server environment and your running it virtualized will help our course staff better serve you by ensuring they're familiar with your setup, too. Finally, the ability to manage a virtualized environment is a valuable skill to have in your repertoire.
 
+For Ubuntu 18.04, Debian Sid, and newer versions of either, running `sudo apt install vagrant virtualbox` should be enough. This should also work for older releases of those distributions, but be aware that we cannot support problems encountered when using the accompanying older versions of Vagrant and Virtualbox.
+
 ## 2. Clone and `vagrant up` the Course VM Project
 
-From Mac, open a Terminal, from Windows, start a new Git Bash shell. Clone the following git repository in the directory of your choosing. Your home directory, that your terminal originally opens in, is a perfectly fine place:
+From Mac or Linux, open a Terminal, from Windows, start a new Git Bash shell. Clone the following git repository in the directory of your choosing. Your home directory, that your terminal originally opens in, is a perfectly fine place:
 
     git clone https://github.com/comp524-s19/unc-comp-vm.git
 
-Once the repository has cloned, continue with the following commands that will change directories into the project and bring *up* the VM. The second command will take some time to complete as it must download the virtual machine image, which is ~1.5 gigabytes, and initialize it.
+Once the repository has cloned, continue with the following commands that will change directories into the project and bring *up* the VM. The second command will take some time to complete as it must download the virtual machine image, which is ~2.1 gigabytes, and initialize it.
 
     cd unc-comp-vm
     vagrant up
@@ -81,7 +83,9 @@ While still logged in to your VM from the steps above, you should initialize you
     git config --global user.name "FirstName LastName"
     git config --global user.email "the-email-@address-you-use-on-github.com"
 
-Additionally, to make it possible for you to *push* commits to GitHub repositories, you will want to generate a key pair that will authenticate you with GitHub. The following command will ask you a series of three questions, just press enter three times for now. The default location for the key is best and you do not need a passphrase to protect the key for now.
+### [Optional] Key Authentication with GitHub
+
+Optionally, you can also enable key-based authentication with GitHub. While the default password-approach should be sufficient for the purposes of this class, many companies only permit key-based authentication. To set this up, you will want to generate a key pair that will authenticate you with GitHub. The following command will ask you a series of three questions, just press enter three times for now. The default location for the key is best and you do not need a passphrase to protect the key for now.
 
     ssh-keygen -t rsa -b 4096 -C "the-email-@address-you-use-on-github.com"
 
