@@ -61,7 +61,7 @@ Are you already running Linux on your laptop? Great! We will still encourage you
 
 From Mac, open a Terminal, from Windows, start a new Git Bash shell. Clone the following git repository in the directory of your choosing. Your home directory, that your terminal originally opens in, is a perfectly fine place:
 
-    git clone https://github.com/comp590-19s/unc-comp-vm.git
+    git clone https://github.com/comp524-s19/unc-comp-vm.git
 
 Once the repository has cloned, continue with the following commands that will change directories into the project and bring *up* the VM. The second command will take some time to complete as it must download the virtual machine image, which is ~1.5 gigabytes, and initialize it.
 
